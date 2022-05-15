@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5560574714971969630}
   - component: {fileID: -4075767342102419520}
   - component: {fileID: 1552938652777948129}
+  - component: {fileID: -974052497390975959}
   m_Layer: 0
   m_Name: Lv1BulletBlue
   m_TagString: Laser
@@ -133,3 +134,15 @@ CapsuleCollider:
   m_Height: 103.17493
   m_Direction: 1
   m_Center: {x: 0, y: 50.000008, z: 0}
+--- !u!114 &-974052497390975959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560574714960845888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67798e4881836954e876e4c3a9afe07e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

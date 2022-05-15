@@ -31,8 +31,11 @@ public class MobSpawner : MonoBehaviour
     
     void Update()
     {
+        Debug.Log(EnemiesIsAlive());
+        
         if(Spawn_State == SpawnState.Waiting)
         {
+            
             if (!EnemiesIsAlive())
             {
                 WaveCleared();
@@ -72,19 +75,11 @@ public class MobSpawner : MonoBehaviour
         }
     }
     private bool EnemiesIsAlive()
-    {
-        if ((ControlEnemiesDelay -= Time.deltaTime) <= 0f)
-        {
-            ControlEnemiesDelay = 2f;
-
+    { 
             if (GameObject.FindGameObjectWithTag("Enemy") == null)
                 return false;
             else
                 return true;
-        }
-        else
-            return true;
-
     }
      IEnumerator SpawnMobs(Waves _waves)
     {

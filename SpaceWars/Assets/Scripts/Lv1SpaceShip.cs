@@ -7,13 +7,13 @@ public class Lv1SpaceShip : SpaceShips
    Rigidbody rb { get { return GetComponent<Rigidbody>(); } }
     float elapsedtime;
     float delay = 1f / 5f;
+    int LaserSpeed=250;
 
 
 
     private void Start()
     {
-        
-        moveSpeed = 25f;
+        moveSpeed = 75f;
         RotationSpeed = 120f;
     }
     private void Update()
@@ -39,7 +39,7 @@ public class Lv1SpaceShip : SpaceShips
          laser.transform.position = Guns[0].transform.position;
          laser.transform.rotation = Guns[0].transform.rotation;
          laser.SetActive(true);
-         laser.GetComponent<Rigidbody>().velocity = 100 * Guns[0].up;
+         laser.GetComponent<Rigidbody>().velocity = LaserSpeed * Guns[0].up;
             
         }
         var laser2 = Lv1LaserPooler.Instance.getLasersFromPool2();
@@ -49,7 +49,7 @@ public class Lv1SpaceShip : SpaceShips
             laser2.transform.position = Guns[1].transform.position;
             laser2.transform.rotation = Guns[1].transform.rotation;
             laser2.SetActive(true);
-            laser2.GetComponent<Rigidbody>().velocity = 100 * Guns[1].up;
+            laser2.GetComponent<Rigidbody>().velocity = LaserSpeed * Guns[1].up;
 
         }
 
